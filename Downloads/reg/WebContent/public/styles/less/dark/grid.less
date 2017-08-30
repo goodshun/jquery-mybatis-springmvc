@@ -1,0 +1,51 @@
+.ui-jqgrid-view {
+    .ui-jqgrid-hdiv {
+        background-color: @light-bg-color;
+        .ui-jqgrid-htable .ui-th-column {
+            border-right-color: #ededed;
+            border-bottom-color: #f2f2f2;
+        }
+    }
+    .ui-jqgrid-bdiv {
+        .ui-jqgrid-btable {
+            tr {
+                &.jqgrow td {
+                    &:extend(.ui-jqgrid-view .ui-jqgrid-hdiv .ui-jqgrid-htable .ui-th-column);
+                    .tree-wrap{
+                        color: #f39c12;
+                    }
+                }
+                &:hover {
+                    background-color: #e8faff;
+                    .icon-group-embed,
+                    .ui-inline {
+                        color: #18bee7;
+                    }
+                }
+                &.ui-state-highlight {
+                    background-color: #ddf8ff;
+                    .icon-group-embed,
+                    .ui-inline {
+                        color: #18bee7;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.jqgrow:nth-child(2n+1) {
+    background-color: inherit;
+}
+
+.icon-group-embed > span:hover {
+    color: #009abe;
+}
+.ui-jqgrid-pager{
+    background-color: @light-bg-color;
+    .ui-pg-control .pagination > li.active > a{
+        background-color: #65666f;
+        color: #fff;
+        border: 1px solid @border-default-color;
+    }
+}

@@ -1,0 +1,38 @@
+.pagination {
+    > li {
+        >a {
+            &:hover,
+            &:focus {
+                background-color: @bg-primary-color;
+                color: #fff;
+                border-color: inherit;
+            }
+        }
+        >span {
+            background-color: transparent;
+            &:hover,
+            &:focus {
+                &:extend(.pagination > li > span);
+            }
+        }
+        &.first,
+        &.next,
+        &.prev,
+        &.last {
+            >a {
+                &:extend(.pagination > li > a:hover);
+            }
+        }
+        &.disabled {
+            >a {
+                background-color: @base-bg-color;
+                border-color: #d9d9d9;
+                color: #b5b5b5;
+                &:hover,
+                &:focus {
+                    &:extend(.pagination > li.disabled > a);
+                }
+            }
+        }
+    }
+}

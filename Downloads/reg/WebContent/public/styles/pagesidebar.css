@@ -1,0 +1,363 @@
+/**
+         * fish-desktop v1.5.0
+         *
+         * Copyright 2013-2015, ZTESoft, Inc.
+         * All rights reserved.
+         *
+         * This source code is licensed under the LGPLV3-style license found in the
+         * LICENSE file in the root directory of this source tree. 
+         *
+         */
+
+
+/*-----------------pagesidebar--------------------------*/
+
+.ui-sidebar-wrapper {
+    position: relative;
+}
+
+.ui-sidebar {
+    background-color: #41586e;
+    -webkit-font-smoothing: antialiased;
+}
+
+.ui-sidebar .ui-sidebar-menu {
+    border-bottom: 1px solid transparent;
+    border-color: rgba(255, 255, 255, 0.05);
+    width: 44px;
+}
+
+.ui-sidebar .ui-sidebar-menu > li {
+    border-left: none;
+    position: relative;
+    display: block;
+    line-height: 1.5;
+}
+
+.ui-sidebar .ui-sidebar-menu > li > a {
+    color: #adbece;
+    padding: 11px 15px;
+    position: relative;
+    font-size: 12px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    border-top: 1px solid transparent;
+    border-color: rgba(255, 255, 255, 0.05);
+    transition: color .3s ease-in-out 0s;
+}
+
+.ui-sidebar .ui-sidebar-menu > li > a:hover,
+.ui-sidebar .ui-sidebar-menu > li.active > a,
+.ui-sidebar .ui-sidebar-menu > li:hover > a,
+.ui-sidebar .ui-sidebar-menu > li.open > a {
+    color: #f4f3f9;
+    background-color: rgba(0, 0, 0, 0.1) !important
+}
+
+.ui-sidebar .ui-sidebar-menu > li.active,
+.ui-sidebar .ui-sidebar-menu > li:hover {
+    border-left-color: transparent;
+}
+
+.ui-sidebar .ui-sidebar-menu > li:hover a > i > b {
+    position: absolute;
+    left: -41px;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    z-index: 0;
+    -webkit-transition: left .25s;
+    transition: left .25s;
+}
+
+.ui-sidebar .ui-sidebar-menu > li.open {
+    border-left-color: #2dc3e8;
+}
+
+.ui-sidebar .ui-sidebar-menu > li > a > i {
+    margin: -14px -15px;
+    line-height: 44px;
+    float: left;
+    margin-right: 10px;
+    font-size: 12px;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.ui-sidebar .ui-sidebar-menu > li > a > i:before {
+    position: relative;
+    z-index: 2;
+}
+
+.ui-sidebar .ui-sidebar-menu > li > a > .icon,
+.ui-sidebar .ui-sidebar-menu .sub-menu > li > a > .icon {
+    width: 44px;
+    margin-right: 8px;
+    text-align: center;
+}
+
+.ui-sidebar .ui-sidebar-menu > li > a .arrow {
+    position: static;
+    margin-top: 0;
+    opacity: 1;
+    top: 0;
+}
+
+.ui-sidebar .ui-sidebar-menu .sub-menu {
+    background-color: #374b5e;
+}
+
+.ui-sidebar .ui-sidebar-menu .sub-menu > li.active > a {
+    background-color: transparent;
+    color: #adbece;
+}
+
+.ui-sidebar .ui-sidebar-menu .sub-menu > li > a {
+    color: #adbece;
+    padding: 11px 15px;
+    position: relative;
+    font-size: 12px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    border-top: 1px solid transparent;
+    border-color: rgba(255, 255, 255, 0.05);
+    transition: color .3s ease-in-out 0s;
+}
+
+.ui-sidebar .ui-sidebar-menu .sub-menu > li > a:hover {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+    color: #fff;
+}
+
+.ui-sidebar .ui-sidebar-menu .sub-menu > li > a:focus {
+    outline: 0;
+}
+
+.ui-sidebar .ui-sidebar-menu .sub-menu > li > a > i {
+    margin: -12px -15px;
+    line-height: 44px;
+    float: left;
+    margin-right: 10px;
+    font-size: 12px;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.ui-sidebar .ui-sidebar-menu .sub-menu > li > a > i:before {
+    position: relative;
+    z-index: 2;
+}
+
+.ui-sidebar .ui-sidebar-menu.ui-sidebar-menu-closed > li {
+    border-left: 0;
+    background-color: #41586e;
+}
+
+.ui-sidebar .ui-sidebar-menu.ui-sidebar-menu-closed > li:hover {
+    color: #fff;
+}
+
+.ui-sidebar .ui-sidebar-menu.ui-sidebar-menu-closed > li:hover > a {
+    background-color: #507cd1;
+    color: #fff;
+}
+
+.ui-sidebar .ui-sidebar-menu.ui-sidebar-menu-closed > li:hover > .sub-menu {
+    background-color: #374b5e;
+}
+
+.ui-sidebar .ui-sidebar-menu.ui-sidebar-menu-closed > li > a {
+    background-color: transparent;
+    color: #f4f3f9;
+    padding: 0px 0px;
+}
+
+.ui-sidebar .ui-sidebar-menu.ui-sidebar-menu-closed > li > a > span {
+    line-height: 44px;
+}
+
+.ui-sidebar .ui-sidebar-menu.ui-sidebar-menu-closed > li:hover > a .title {
+    padding-left: 10px;
+}
+
+.ui-sidebar-left .page-container-wrapper {
+    margin-left: 230px;
+}
+
+.ui-sidebar-left.ui-sidebar-closed .page-container-wrapper {
+    margin-left: 50px;
+}
+
+.left-bg-color {
+    background-color: #78d23c;
+}
+
+.ui-sidebar .js-menu-right.glyphicon-menu-right:before {
+    content: "";
+}
+
+.ui-sidebar .js-menu-right.glyphicon-menu-down:before {
+    content: "";
+}
+
+.navbar_head {
+    background-color: #2e3e4e
+}
+
+.fixsidebar {
+    background-color: #41586e;
+    border-bottom: 1px solid transparent;
+    font-size: 12px;
+    line-height: 1.5;
+    list-style: none;
+    min-width: 200px;
+}
+
+.fixsidebar a {
+    color: #adbece;
+    text-decoration: none;
+    line-height: 22px;
+    border-top: 1px solid transparent;
+    border-color: rgba(255, 255, 255, 0.05);
+    padding: 11px 15px;
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: color .3s ease-in-out 0s;
+    cursor: pointer;
+}
+
+.fixsidebar a:hover {
+    color: #f4f3f9;
+    background-color: rgba(0, 0, 0, 0.1) !important
+}
+
+.fixsidebar a > i {
+    margin: -14px -15px;
+    line-height: 44px;
+    float: left;
+    margin-right: 10px;
+    font-size: 12px;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    width: 44px;
+    margin-right: 8px;
+    text-align: center;
+}
+
+
+/*
+.fixsidebar > a > span:nth-child(2) {
+    display: none;
+}
+*/
+
+.fixsidebar > a > i {
+    display: none;
+}
+
+.fixsidebar ul {
+    padding: 0;
+    margin: 0;
+}
+
+.fixsidebar .sub-menu {
+    background-color: #374b5e;
+}
+
+.fixsidebar .sub-menu > li.active > a {
+    background-color: transparent;
+    color: #adbece;
+}
+
+.fixsidebar .sub-menu > li > a {
+    color: #adbece;
+    padding: 11px 15px;
+    position: relative;
+    font-size: 12px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    border-top: 1px solid transparent;
+    border-color: rgba(255, 255, 255, 0.05);
+    transition: color .3s ease-in-out 0s;
+}
+
+.fixsidebar .sub-menu > li > a:hover {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+    color: #fff;
+}
+
+.fixsidebar .sub-menu > li > a:focus {
+    outline: 0;
+}
+
+.fixsidebar .sub-menu > li > a > i {
+    margin: -12px -15px;
+    line-height: 44px;
+    float: left;
+    margin-right: 10px;
+    font-size: 12px;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.fixsidebar .sub-menu > li > a > i:before {
+    position: relative;
+    z-index: 2;
+}
+
+.fixsidebar .js-menu-right.glyphicon-menu-right:before {
+    content: "";
+}
+
+.fixsidebar .js-menu-right.glyphicon-menu-down:before {
+    content: "";
+}
+
+.fixsidebar .fa-angle-down:before {
+    content: "";
+}
+
+.ink {
+    display: block;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 100%;
+    -ms-transform: scale(0);
+    -moz-transform: scale(0);
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    z-index: 999;
+}
+
+.ink.animate {
+    animation: ripple 0.35s linear;
+}
+
+@keyframes ripple {
+    100% {
+        opacity: 0;
+        -ms-transform: scale(1.5);
+        -moz-transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+    }
+}
+
+.navbar_head .portalMenu > li.active a,
+.navbar_head .portalMenu > li.active a:hover {
+    background-color: #2dc3e8;
+    color: #fff;
+}

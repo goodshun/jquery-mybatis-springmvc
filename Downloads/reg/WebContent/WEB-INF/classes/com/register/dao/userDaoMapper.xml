@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- sql 映射文件  -->
+
+<mapper namespace="com.register.dao">
+
+	<!-- 用户注册的判断 -->
+	<insert id="addUser" parameterType="map">
+		insert into user_login (phone_mobile,login_password,register_time,user_code,user_role) values(#{phone_mobile},#{login_password},#{register_time},#{user_code},#{user_role})
+	</insert>
+	
+	<!-- 用户名唯一性的判断 -->
+	<select id="judgeUser" parameterType="String" resultType="com.register.vo.User">
+		select phone_mobile from user_login where phone_mobile=#{phone_mobile}
+	</select>
+	
+	<!-- 用户登录的判断返回一个user给service处理 -->
+	<select id="userLogin" parameterType="map" resultType="com.register.vo.User">
+		select phone_mobile,login_password from user_login where phone_mobile=#{phone_mobile} and login_password=#{login_password}
+	</select>
+	<insert id="addUserInfo" parameterType="map">
+	insert into userInfo values (#{user_id},#{user_name},#{user_sex},#{user_address},#{user_email},#{user_bank_count},#{user_bank_name},#{user_money});
+	</insert>
+	<select id="getUserInfo" parameterType="map"  resultType="com.usercenter.vo.UserInfo">
+		select * from userInfo where user_id=#{user_id}
+	</select>
+</mapper>

@@ -1,0 +1,92 @@
+
+<div class="ui-dialog" id="addFarmDialog">
+	<div class="modal-header">
+		<h4 class="modal-title">上传农场</h4>
+	</div>
+	<div class="modal-body">
+		<form class="form-horizontal" id="detailfrom">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="col-md-4 control-label">农场名称：</label>
+							<div class="input-group col-md-8">
+								<input class="form-control" name="REQUIREMENT_TITLE"data-rule="required;" id="add_farm_name">
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="col-md-4 control-label">农场大小(亩)：</label>
+							<div class="input-group col-md-8">
+								<input class="form-control" name="REPORTER"
+									data-rule="required;" id="add_farm_size">
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="col-md-4 control-label">农场地址：</label>
+							<div class="input-group col-md-8">
+								<input class="form-control" name="REPORTER_PHONE"
+									data-rule="required;" id="add_farm_address">
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="col-md-5 control-label">租赁价格(元/年)：</label>
+							<div class="input-group col-md-7">
+								<input class="form-control" name="REPORTER_ADDRESS"
+									data-rule="required;" id="add_farm_price">
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="col-md-4 control-label">联系方式：</label>
+							<div class="input-group col-md-8">
+								<input class="form-control" name="RECEIVER"
+									data-rule="required;" id="add_farm_phone">
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 detail-show" style="display: none;">
+						<div class="form-group">
+							<label class="col-md-4 control-label">农场状态：</label>
+							<div class="input-group col-md-8">
+								<input class="form-control" name="RECEIVER"
+									data-rule="required;" id="add_farm_state">
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 detail-show" style="display: none;">
+						<div class="form-group">
+							<label class="col-md-4 control-label">发布时间：</label>
+							<div class="input-group col-md-8">
+								<input class="form-control" name="RECEIVER"
+									data-rule="required;" id="add_farm_time">
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-lg-12" id="state_showOrnot">
+						<input type ="file" id="ImportPicInput" name= "myfile" style=" display: none" />  
+      					<div class ="input-append">  
+             				<label for ="importPicName"> 上传农场图片：</label >  
+            				<input type ="text" class="input-large" id= "importPicName" disabled="true" />  
+             				<a class ="btn btn-default" onclick= "$('#ImportPicInput').click();" id="openDir" > 打开</a> <span style="margin-left: 5px;color:#f00;">建议大小200x200</span> 
+     					 </div >  
+     					 <img src="" style="height:100px;width: 100px; display:none"; id="farm_photo"  />
+					</div>
+				</div>
+				<div class="panel-footer text-right js-buttons-view">
+
+					<button type="button" id="saveCard" class="btn btn-default">提交</button>
+					<button type="button" id="Cancel" class="btn btn-default">取消</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

@@ -1,0 +1,36 @@
+.nav-head > li {
+    &:hover,&.mouseenter{
+        background-color: #2c2d34;
+    }
+}
+.nav-head {
+    >.open{
+        box-shadow: none;
+        &:hover{
+            background-color: @bg-primary-color;
+        }
+    }
+}
+.menu.menu-main{
+    border: 1px solid #3a3b41;
+    background-color: #585963;
+    >.menu-item{
+        a{
+            color: #d7d7da;
+            border: 0;
+            &:hover,&.ui-state-focus,&.ui-state-active{
+                background-color: #3a3b41;
+                color: #3dcdf1;
+                ~.menu-item-icon{
+                    color: #3dcdf1;
+                }
+            }
+        }
+        >.menu-item-icon{
+            color: #d7d7da;
+        }
+    }
+    .menu-submenu{
+        &:extend(.menu.menu-main all);
+    }
+}

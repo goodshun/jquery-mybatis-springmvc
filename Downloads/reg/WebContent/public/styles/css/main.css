@@ -1,0 +1,317 @@
+.main-title {
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 160px;
+	position: relative;
+	top: -1px;
+}
+
+.main-title>.main>ul {
+	position: relative;
+	float: right;
+	margin-right: 45px;
+}
+
+.main-title>.main>ul>li {
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	background-color: #000;
+	border-radius: 6px;
+	margin: 20px 12px;
+	opacity: 0.5;
+	filter: Alpha(Opacity = 50);
+	color: #fff;
+	overflow: hidden;
+}
+
+.main-title>.main>ul>li>a {
+	color: #fff;
+}
+
+.main-title>.main>ul>li:hover {
+	background-color: #2495e4;
+	opacity: 1;
+}
+
+.main-title>.main>ul>li>a>p {
+	color: #fff;
+	font-size: 13px;
+	text-align: center;
+}
+
+.main-title>.main>ul>li>a>p.num {
+	font-size: 38px;
+	font-family: Impact;
+	margin-top: 5px;
+}
+
+.content-bottom {
+	position: relative;
+}
+
+.content-bottom .commonFun {
+	position: relative;
+}
+
+.commonFun li {
+	position: relative;
+	text-align: center;
+	width: 18%;
+	margin: 20px 2% 20px 3%;
+	float: left;
+	border-right: 1px solid #ccc;
+	padding-right: 1.8%;
+}
+
+.commonFun li p {
+	font-size: 12px;
+	color: #484848;
+	margin-top: 5px;
+}
+
+.commonFun .btn-loc {
+	float: right;
+	margin-right: 90px;
+	margin-bottom: 10px;
+}
+
+.commonFun li:hover i {
+	display: block;
+}
+
+.commonFun .img-content {
+	text-align: left;
+	margin-left: 80px;
+	position: relative;
+}
+
+.commonFun .img-content h2 {
+	font-size: 16px;
+	color: #000;
+	font-weight: 300;
+}
+
+.slider-main {
+	position: relative;
+	padding: 0px 25px;
+}
+
+.content-bottom .content-img {
+	position: relative;
+	padding: 10px 25px;
+	border-top: 1px solid #ccc;
+}
+
+.slider-main i.close:hover {
+	color: #d32c16 !important;
+}
+
+.slider-main i.close {
+	position: absolute;
+	left: 48px;
+	top: 0px;
+	color: #272636;
+	display: none;
+}
+
+.content-img i.choose {
+	position: absolute;
+	top: 0px;
+	left: 48px;
+	color: #666;
+	display: none;
+}
+
+.content-img i.selected {
+	color: #93bf2a;
+	display: block;
+}
+
+.slider-main a:hover i.close {
+	display: block;
+}
+
+.bottom-left {
+	width: 60%;
+	position: relative;
+	float: left;
+	margin-bottom: 10px;
+}
+
+.content-bottom .title {
+	position: relative;
+	height: 35px;
+	line-height: 35px;
+	text-align: left;
+	text-indent: 10px;
+	font-size: 18px;
+	color: #000;
+	margin-top: 10px;
+	font-weight: 600;
+}
+
+.content-bottom .title>a {
+	position: absolute;
+	right: 10px;
+	font-size: 14px;
+	font-weight: 300;
+	color: #666;
+}
+
+.content-bottom .title a:hover {
+	cursor: pointer;
+	text-decoration: none;
+	color: #479de6;;
+}
+
+.content-bottom .title a:hover {
+	color: #479de6;;
+}
+
+.content-bottom .title a:hover i {
+	color: #479de6 !important;
+}
+
+.left-div {
+	position: relative;
+}
+
+.title>a>span {
+	position: relative;
+	margin-right: -12px;
+	font-size: 12px;
+}
+
+.bottom-left .left-div .content-footer-ul {
+	border-right: 1px solid #d6d6d6;
+}
+
+.left-div .content-footer-ul {
+	padding-right: 40px;
+	width: 97%;
+}
+
+.content-footer-ul {
+	position: relative;
+	margin: 10px 10px;
+	text-align: left;
+	font-size: 12px;
+}
+
+.content-footer-ul li {
+	height: 26px;
+	line-height: 26px;
+}
+
+.bottom-right .left-div>ul>li {
+	border: 0;
+}
+
+.content-footer-ul>li>a>i {
+	position: relative;
+	top: -2px;
+}
+
+.content-footer-ul li>span {
+	float: right;
+}
+
+.content-footer-ul .content-titleLong {
+	position: absolute;
+	left: 20px;
+	width: 600px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.bottom-right .left-div>ul>li span.content-titleLong {
+	width: 270px;
+}
+
+.content-footer-ul span {
+	color: #999;
+}
+
+.content-footer-ul a span {
+	color: #333;
+}
+
+.content-footer-ul a:hover>span {
+	cursor: pointer;
+	text-decoration: none;
+	color: #479de6;
+}
+
+.content-footer-ul a:hover>i {
+	color: #479de6 !important;
+}
+
+.content-footer-ul a:hover>span b {
+	color: #479de6;
+}
+
+.content-footer-ul .content-titleLong em {
+	background-color: #e93333;
+	color: #fff;
+	padding: 2px 4px;
+	margin-right: 6px;
+}
+
+.content-footer-ul .content-titleLong b {
+	font-weight: 300;
+}
+
+.content-footer-ul li a {
+	color: #333;
+}
+
+.content-bottom a:hover {
+	cursor: pointer;
+	text-decoration: none;
+	color: #479de6;
+}
+
+.left-half {
+	width: 45%;
+	position: relative;
+	float: left;
+	margin: 0px 1% 0px 2%;
+}
+
+.left-half li {
+	border: none;
+}
+
+ol.content-footer-ul>li {
+	list-style: decimal;
+}
+
+.bottom-right {
+	position: relative;
+	float: right;
+	width: 35%;
+}
+
+.content-title {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	width: 240px;
+}
+
+.indent-18 {
+	text-indent: 18px;
+}
+
+
+
+.nav-head-icon {
+    padding: 16px 20px;
+    top: 0;
+    font-size: 17px;
+    color: white;
+}

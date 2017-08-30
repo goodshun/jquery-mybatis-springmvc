@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- sql 映射文件  -->
+<mapper namespace="com.menu.dao">
+
+<!-- 获取菜单信息 -->
+	<select id="getMenu" parameterType="String"  resultType="com.menu.vo.Menu">
+		
+		select menu_name,menu_url , menu_role from menu a, user_login b where  b.phone_mobile=#{phone} and  b.user_role = a.menu_role
+	</select>
+
+
+</mapper>

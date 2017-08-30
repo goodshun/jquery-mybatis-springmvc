@@ -1,0 +1,100 @@
+/*---------------tabs-----------------------------------*/
+.tabs-nav {
+    > .ui-tabs-nav {
+        background-color: #3dcdf1;
+        border-bottom-color: #00b2db;
+        padding-bottom: 0;
+        padding-top: 13px;
+        &.tabs-nav-reduced {
+            background-color: #fafafa;
+            li {
+                background-color: #f3f3f3;
+                background: linear-gradient(to bottom, #fff, #f3f3f3);
+                a {
+                    color:#333;
+                }
+                &.ui-state-hover {
+                    background-color: #E0DFDF;
+                    background: linear-gradient(to bottom, #fff, #E0DFDF);
+                    a {
+                        color: #333;
+                    }
+                }
+                &.ui-tabs-active {
+                    background-color: #08b8e4;
+                    background: linear-gradient(to bottom, #00b2db, #08b8e4);
+                    a {
+                        color: #fff;
+                        padding: 4px 15px;
+                        &:focus {
+                            color: #fff;
+                        }
+                    }
+                    &.ui-state-hover {
+                        background-color: #35BBDC;
+                        background: linear-gradient(to bottom, #0CC3F1, #35BBDC);
+                        a {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+        li {
+            border: 1px solid #00b2db;
+            border-bottom: 0;
+            border-radius: 3px 3px 0 0;
+            margin: 0 5px -1px 0;
+            background-color: #08b8e4;
+            background: linear-gradient(to bottom, #00b2db, #08b8e4);
+            > a {
+                color: #fff;
+            }
+            .close{
+                visibility: visible;
+                color: #006c85;
+                &:hover {
+                    color: #fff;
+                }
+            }
+            &.ui-tabs-active {
+                background-color: @base-bg-color;
+                background: linear-gradient(to bottom, #fff, @base-bg-color);
+                > a{
+                    color: #333;
+                    &:focus {
+                        color: lighten(#333, 10%);
+                    }
+                }
+                .close{
+                    color: #333;
+                }
+                &.ui-state-hover{
+                    background-color: @base-bg-color;
+                    background: linear-gradient(to bottom, #fff, @base-bg-color);
+                    > a {
+                        color: inherit;
+                    }
+                    .close {
+                        color: inherit;
+                        &:hover {
+                            color: red;
+                        }
+                    }
+                }
+            }
+            &.ui-state-hover{
+                background-color: #02a6cc;
+                background: linear-gradient(to bottom, #00b2db, #02a6cc);
+                > a{
+                    color: #fff;
+                }
+            }
+            &.ui-tabs-paging-prev > a,
+            &.ui-tabs-paging-next > a {
+                width: 24px;
+                padding: 4px 8px;
+            }
+        }
+    }
+}

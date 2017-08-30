@@ -1,0 +1,34 @@
+html,
+body {
+    height: 100%;
+    color: @text-default-color;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: @font-default-size;
+    background-color: @body-color;
+    overflow-x: hidden;
+}
+label{
+    font-weight: normal;
+    font-size: inherit;
+    color: inherit;
+}
+textarea{
+    resize:none;
+}
+// --------------tootltip--------------------------
+.tooltip.bottom .tooltip-arrow{
+    border-bottom-color: @tool-tip-bg-color;
+}
+.tooltip-inner{
+    background-color: @tool-tip-bg-color;
+    border-radius: 3px;
+}
+// -------------dropdown list----------------------
+.dropdown-list{
+    >.active{
+        background-color: @dropdown-bg-color;
+        &:hover{
+            background-color: @dropdown-bg-color;
+        }
+    }
+}

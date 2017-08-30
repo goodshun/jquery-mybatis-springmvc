@@ -1,0 +1,42 @@
+
+<div class="ui-dialog" id="messageDeataiDialog">
+	<div class="modal-header">
+		<h4 class="modal-title">消息详情</h4>
+	</div>
+	<div class="modal-body">
+		<form class="form-horizontal" id="detailfrom">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<div class="col-md-12">
+						<div class="form-group">
+							<label class="col-md-4 control-label">农场名称：</label>
+							<label class="col-md-1 control-label" id="message_farm_name" style= "text-align: left;"></label>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="form-group">
+							<label class="col-md-4 control-label">农场主ID：</label>
+							<label class="col-md-1 control-label" id="message_farm_sender" style= "text-align: left;"></label>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="form-group">
+							<label class="col-md-4 control-label" >发送时间：</label>
+							<label class="col-md-4 control-label" id="message_farm_time" style= "text-align: left;"></label>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="form-group">
+							<label class="col-md-4 control-label">消息内容：</label>
+							<div class="col-md-8 control-label" >
+								<textarea id="message_farm_content" class="form-control" placeholder="100字以内" style="height: 200px; resize:none;" disabled="disabled" data-rule="required;email;length[10~,true]"></textarea>
+							</div>
+						</div>
+					</div>
+
+					
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

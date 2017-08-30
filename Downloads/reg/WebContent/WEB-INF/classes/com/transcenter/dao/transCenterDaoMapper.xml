@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.transcenter.dao">
+<!-- 获取待租赁信息 -->
+	<select id="getCanTranFarmList"   parameterType="String"  resultType="com.myfarm.vo.Farm">
+		select * from farm where user_id not in (#{user_id}) and farm_state='00A'
+	</select>
+<!-- 判断状态 -->
+	<select id="judgeState" parameterType="String" resultType="com.myfarm.vo.Farm">
+     select * from  farm where farm_id=#{farm_id} and farm_state='00A'
+    </select>
+<!--新增 -->	
+   <insert id="addToCar" parameterType="map">
+   insert into  goodscar(user_id,farm_id) values(#{user_id},#{farm_id})
+   </insert>
+<!-- 新增订单 -->
+	<insert id="addDetail" parameterType="map">
+	insert into detail(farm_id,order_id,start_time,end_time,detail_state) values(#{farm_id},#{user_id},#{start_time},#{end_time},#{detail_state})
+	</insert>
+	<!-- 更新农场状态 -->
+	<update id="updateFarmState"  parameterType="String">
+	UPDATE farm SET farm_state='00X' WHERE farm_id=#{farmId}
+	</update>
+<!-- 获取消息列表 -->
+	<select id="getMessageList" parameterType="map" resultType="com.transcenter.vo.MessageInfo">
+		select a.message_id,a.sender_id,a.message_time,a.message_content,b.farm_name from message a,farm b where a.reciver_id = #{user_id} and a.farm_id = b.farm_id and a.message_state ='00A'
+	</select >
+	<update id="updateMessageState" parameterType="map">
+	 update message set message_state = '00X' where message_id = #{message_id}
+	
+	</update>
+	
+</mapper>

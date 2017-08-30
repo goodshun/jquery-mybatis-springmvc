@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.myfarm.dao">
+
+<!-- 1.0我租赁的农场    获取清单 -->
+<select id="getHaveFarmList"   parameterType="String"  resultType="com.myfarm.vo.TranFarm">
+	select a.*,b.start_time,b.end_time,b.detail_id,b.order_id  from farm a,detail b WHERE b.order_id=#{user_id} and b.detail_state='00A' AND b.farm_id=a.farm_id
+</select>
+<!-- 1.1我租赁的农场 插入消息通知 -->
+<insert id="addMessage" parameterType="map" >
+	insert into message(sender_id,reciver_id,message_type,message_time,message_state,farm_id,message_content) values (#{sender_id},#{reciver_id},#{message_type},#{message_time},#{message_state},#{farm_id},#{message_content})	
+</insert>
+<!-- 2.0我被租赁的农场    获取清单 -->
+<select id="getMyOwnFarm"   parameterType="String"  resultType="com.myfarm.vo.TranFarm">
+	select a.*,b.start_time,b.end_time,b.detail_id,b.order_id   from farm a,detail b WHERE a.user_id=#{user_id} and b.detail_state='00A' AND b.farm_id=a.farm_id
+</select>
+<!-- 2.0 获取food列表 -->
+<select id="getFoodList"   parameterType="map"  resultType="com.myfarm.vo.Food" >
+	select * from food where detail_id=#{detail_id} order by food_type asc
+</select>
+<!-- 2.1 删除food信息 -->
+<delete id="deleteFood" parameterType="map">
+	delete from food where detail_id=#{detail_id}
+</delete>
+<!-- 2.2 插入food 信息 -->
+<insert id="insertFood" parameterType="map">
+	insert into food (detail_id,food_count,food_type) values (#{detail_id},#{food_count},#{food_type})
+</insert>
+<!-- 获取待租赁信息 -->
+	<select id="getWaitFarmList"   parameterType="String"  resultType="com.myfarm.vo.Farm">
+		select * from farm where user_id=#{user_id} and farm_state='00A'
+	</select>
+<!--新增 -->	
+   <insert id="addFarm" parameterType="map" >
+   insert into farm (farm_name, farm_size, farm_address, farm_price, farm_photo_url, farm_phone, farm_state,
+			farm_out_time, user_id) values(#{farm_name},#{farm_size},#{farm_address},#{farm_price},#{farm_photo_url},#{farm_phone},#{farm_state},#{farm_out_time},#{user_id})
+   </insert>
+<!-- 删除 -->
+
+ <delete id="deleteFarm" parameterType="map">
+ 	delete from  farm WHERE farm_id= #{farm_id}
+ </delete>
+
+
+<!-- 首页加载最新的农场-->
+<select id="getLastFarm" resultType="com.myfarm.vo.Farm">
+select * from farm where farm_state='00A' order by farm_out_time desc limit 6
+</select>
+
+</mapper>

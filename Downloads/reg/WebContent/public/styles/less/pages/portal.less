@@ -1,0 +1,193 @@
+/*----------------------------portal-------------------------------*/
+#divContent.ui-tabs {
+    .ui-tabs-nav {
+        border-bottom: 1px solid @border-default-color;
+    }
+}
+@nav-base-height: 48px - (2*@padding-base);
+.page-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    border: 0;
+    width: 100%;
+    z-index: 1000;
+    margin-bottom: 0;
+    background-color: @head-bg-color;
+}
+.page-content{
+    padding: 48px 0 0 0;
+    height: 100%;
+    margin-left: -4px;
+    margin-right: -4px;
+}
+.page-content-fullscreen{
+	padding: 0 0 0 0;
+	height: 100%
+}
+.nav-head {
+    margin-right: 0px;
+    color: @head-icon-color;
+    >.open{
+        box-shadow: 0 -3px 2px 2px @icon-shadow-color;
+        &:hover{
+            &:extend(.nav-head > .open);
+        }
+    }
+}
+
+.nav-head > li {
+    font-size: 0;
+    cursor: pointer;
+    &:hover,&.mouseenter{
+        background-color: @head-bg-color;
+        box-shadow: 0 -3px 2px 2px @icon-shadow-color;
+    }
+    &.logo {
+        padding: @padding-base 10px;
+        margin-right: 10px;
+        &:hover{
+            background-color: transparent;
+            box-shadow: none;
+        }
+        
+    }
+}
+
+.nav-head-icon {
+    padding: (@padding-base+1) (@padding-base+5);
+    top: 0;
+    font-size: (@nav-base-height - 3);
+    line-height: @nav-base-height; 
+}
+
+.username {
+    font-size: 14px;
+    color: @user-name-color;
+    line-height: @nav-base-height;
+    font-family: Helvetica, Arial, sans-serif;
+}
+.menu{
+    font-size: 13px;
+    border: 1px solid @border-default-color;
+    >.menu-item{
+        >a{
+            &:hover,&.ui-state-focus,&.ui-state-active{
+                background-color: #f8f8f8;
+            }
+        }
+    }
+    .menu-item{
+        a{
+            padding: 10px (@padding-base+5);
+            color: @text-default-color;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+    &.dropdown-menu{
+        padding: 0;
+        right: -2px;
+        min-width: 200px;
+        max-width: 300px;
+        border: 1px solid #c6c6c6;
+        >.menu-item{
+            >a{
+                &:hover,&:focus{
+                    background-color: @bg-menu-item-color;
+                    color: @text-default-color;
+                }
+            }
+            &.strong{
+                color: #444;
+                height: 39px;
+                cursor: default;
+                > a{
+                    font-weight: bold;
+                    &:hover{
+                        background-color: #fff;
+                        color: #444;
+                    }
+                }
+            }
+            &.border{
+                border-bottom: 1px solid @border-default-color;
+            }
+            &.last{
+                text-align: right;
+                background-color: #f8f8f8;
+            }
+            &.active{
+                >a{
+                    background-color: @bg-menu-item-color;
+                }
+            }
+        }
+    }
+}
+.menu-main{
+    width: 255px;
+    left: -2px;
+    >.menu-item{
+        >a{
+            border-left: 3px solid transparent;
+            border-top: 1px solid transparent;
+            border-bottom: 1px solid transparent;
+            >.ui-menu-icon{
+                display: none;
+            }
+            &:hover,&.ui-state-focus,&.ui-state-active{
+                background-color: #f8f8f8;
+                border-left: 3px solid @bg-primary-color;
+                border-top: 1px solid #f0f0f0;
+                border-bottom: 1px solid #f0f0f0;
+                color: @text-default-color;
+            }
+        }
+        >.menu-item-icon{
+            color: @text-default-color;
+            position: absolute;
+            margin-top: -25px;
+            right: 10px;
+        }
+    }
+    .menu-submenu{
+        border: 1px solid #c6c6c6;
+        border-left: 0;
+        width: 230px;
+        background-color: #f8f8f8;
+        font-size: 13px;
+        box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.175);
+        >.menu-item{
+            >a{
+                &:hover,&.ui-state-active,&.ui-state-focus{
+                    background-color: @hover-bg-color;
+                    color: @text-default-color;
+                }
+            }
+            >.menu-item-icon{
+                &:extend(.menu-main > .menu-item > .menu-item-icon);
+            }
+        }
+    }
+}
+.skin{
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    margin-right: 5px;
+    &.blue{
+        background-color: @bg-blue-color;
+    }
+    &.gray{
+        background-color: @bg-gray-color;
+    }
+    &.dark{
+        background-color: @bg-dark-color;
+    }
+}
+/*-------------------------portal mgr-----------------------*/
+input.dialog-grid-icon{
+    margin: 0 3px 0 0 ;
+    vertical-align: middle;
+}

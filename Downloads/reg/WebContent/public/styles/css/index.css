@@ -1,0 +1,65 @@
+.main {
+	width: 1150px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+.left-1 {
+	float: left;
+	border: 1px solid #ccc;
+	width: 410px;
+	min-height: 480px;
+}
+
+/*节点类目*/
+.node {
+	float: right;
+	border: 1px solid #ccc;
+	width: 710px;
+	min-height: 480px;
+}
+/*
+.main-tab-1 {
+	width: 330px;
+	border: 1px solid #ccc;
+}
+
+.main-tab-1 h1 {
+	font-size: 16px;
+	color: #000;
+	height: 45px;
+	line-height: 45px;
+	padding-left: 10px;
+	text-align: left;
+	background: #fff;
+}
+
+.main-tab-1 th {
+	color: #666;
+	font-size: 12px;
+	text-align: center;
+	height: 45px;
+	line-height: 45px;
+	background: #efefef;
+	cursor: default;
+}
+
+.main-tab-1 td {
+	font-size: 12px;
+	color: #000;
+	text-align: center;
+	height: 45px;
+	line-height: 45px;
+}
+
+.main-tab-1 tr:hover td {
+	background: #38b0f6;
+	color: #fff;
+	cursor: pointer;
+}
+
+.tab-bg {
+	background: #2e9edf !important;
+	color: #fff !important;
+}
+*/

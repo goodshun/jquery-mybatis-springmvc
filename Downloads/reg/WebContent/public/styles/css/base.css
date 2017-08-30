@@ -1,0 +1,296 @@
+body {
+	background-color: #fff;
+	min-width: 1150px;
+	min-height: 450px;
+}
+
+.headBg, .head {
+	position: relative;
+	background: #19b1de;
+	height: 60px;
+}
+.head{
+	width: 100%;
+}
+
+ .nav, .main {
+	margin: 0 auto;
+	width: 1150px;
+}
+
+.head .logo {
+	height: 60px;
+	line-height: 60px;
+}
+
+.login-text {
+	position: absolute;
+	bottom: 2px;
+	right: 20PX;
+	color: #666;
+	line-height: 60px;
+}
+
+.login-text .title, .login-text .title>a {
+	font-size: 16px;
+	color: #000;
+}
+
+.login-text>span, .login-text>a {
+	font-size: 12px;
+	color: #666;
+	margin-left: 8px;
+	bottom: 2px;
+	position: relative;
+}
+
+.login-text .text {
+	margin: 0 6px;
+	float: left;
+	cursor: pointer;
+}
+
+.ellipsis {
+	max-width: 100px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: inline-block;
+	_width: expression(this.offsetWidth > 100 ? auto : '100px');
+}
+
+.login-text .text b {
+	display: inline-block;
+	/*width: 100%;*/
+	/*height: 23px;*/
+	/*line-height: 23px;*/
+	font-weight: 600;
+	font-size: 13px;
+	color: #333;
+	text-align: left;
+}
+
+.login-text .text p {
+	display: inline-block;
+	font-size: 12px;
+	color: #666;
+}
+
+.login-text i.arrow-tri {
+	position: absolute;
+	cursor: pointer;
+	background-image: url(../img/arrow.png);
+	background-position: -55px 0px;
+	width: 20px;
+	height: 22px;
+	top: 12px;
+}
+
+.jobs_select_div {
+	background: #fff;
+	border: 1px solid #aaa;
+	padding: 2px;
+	position: absolute;
+	top: 53px;
+	left: 0px;
+	z-index: 10000;
+	width: 194px;
+	display: none;
+}
+
+.jobs_select_list {
+	display: block;
+	padding: 0px;
+	margin: 0px;
+}
+
+.jobs_select_list li {
+	width: 100%;
+	float: left;
+	text-align: left;
+	height: 24px;
+	line-height: 24px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.jobs_select_list li a {
+	display: block;
+	color: #444;
+	font-size: 13px;
+	margin-left: 10px;
+}
+
+.jobs_select_list li:hover {
+	background-color: #1586ce;
+	color: #fff;
+	text-decoration: none;
+}
+
+.jobs_select_list li a {
+	text-decoration: none;
+}
+
+.jobs_select_list li a:hover {
+	text-decoration: none;
+	color: #fff;
+}
+
+.login-text i.open {
+	background-position: -35px 0px;
+}
+
+.navBg, .nav {
+	background: #34373a;
+	height: 47px;
+}
+
+.navMain {
+	width: 1150px;
+	height: 47px;
+	float: left;
+	font-size: 14px;
+	overflow: hidden;
+}
+
+.fl {
+	float: left;
+}
+
+.navMain li {
+	line-height: 47px;
+	width: 95px;
+	text-align: center;
+	overflow: visible;
+	float: left;
+}
+
+.navMain>ul>li a {
+	color: #fff;
+	font-size: 14px;
+	display: block;
+}
+
+.navMain li.cur>a {
+	background-color: #2b96d4;
+}
+
+.navMain li:hover {
+	background-color: #34a9ee;
+}
+
+.navMain li:hover>a {
+	color: #fff;
+}
+
+.navMain li:hover>ul {
+	display: block;
+}
+
+.navMain li:hover>ul {
+	display: block;
+}
+
+.navMain>ul>li>ul {
+	display: none;
+	position: absolute;
+	border: 2px solid #00a0e9;
+	border-top: 0px;
+	z-index: 8888;
+	font-size: 14px;
+	font-family: "Microsoft YaHei";
+	line-height: 2.857;
+	text-align: center;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	background-color: #fff;
+}
+
+.navMain>ul>li>ul li {
+	height: 38px;
+	line-height: 38px;
+	font-size: 14px;
+	float: none;
+	text-align: left;
+	padding: 0px 10px;
+	min-width: 78px;
+}
+
+.navMain>ul>li>ul a {
+	display: block;
+	color: #000;
+}
+
+.navMain>ul>li>ul a:hover {
+	color: #fff;
+}
+
+.navMain>ul>li>ul>li>ul {
+	display: none;
+	position: absolute;
+	top: 0px;
+	left: 120px;
+	border: 2px solid #00a0e9;
+	z-index: 1;
+	font-size: 14px;
+	font-family: "Microsoft YaHei";
+	line-height: 2.857;
+	text-align: center;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	background-color: #fff;
+}
+
+.navMain>ul>li>ul>li>ul>li {
+	height: 38px;
+	line-height: 38px;
+}
+
+/* 涓夌骇鑿滃崟 */
+.navMain>ul>li>ul>li:hover {
+	position: relative;
+}
+
+.navMain>ul>li:hover>ul>li:hover>ul {
+	display: block;
+}
+
+.breadCrumb {
+	margin: 0 auto;
+	/*height: 35px;*/
+	line-height: 35px;
+	border-bottom: 1px solid #e4e4e4;
+	font-size: 13px;
+	color: #666;
+	text-align: left;
+}
+
+.breadCrumb>i {
+	color: #343434;
+	margin-right: 5px;
+	margin-top: -7px;
+}
+
+.breadCrumb a {
+	font-size: 13px;
+	color: #666;
+}
+
+.breadCrumb a:hover {
+	color: #0085d0;
+}
+
+.mlr5 {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.label_blue {
+	color: blue;
+}
+
+.label_cursor {
+	cursor: pointer;
+}

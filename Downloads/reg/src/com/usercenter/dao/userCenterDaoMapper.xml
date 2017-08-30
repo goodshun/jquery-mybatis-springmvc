@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- sql 映射文件  -->
+<mapper namespace="com.usercenter.dao">
+<select id="getCarList" parameterType="map" resultType="com.usercenter.vo.CarInfo">
+SELECT b.good_id,a.farm_id,a.farm_name,a.farm_address,a.farm_out_time,a.farm_phone,a.user_id,a.farm_state,a.farm_price,a.farm_size  FROM farm a,goodscar b WHERE b.user_id=#{user_id} AND b.farm_id = a.farm_id AND a.farm_state = '00A'
+</select>
+<delete id="deleteCarList" parameterType="map" >
+delete from goodsCar where good_id=#{good_id}
+</delete>
+<select id="getDetailList" parameterType="map" resultType="com.usercenter.vo.DetailInfo">
+SELECT b.detail_id,a.user_id,a.farm_id,a.farm_name,a.farm_address,a.farm_price,a.farm_size,b.start_time,b.end_time,b.detail_state  FROM farm a,detail b WHERE b.order_id=#{user_id} AND b.farm_id = a.farm_id 
+</select>
+
+<!--模糊查询  -->
+	<select id="queryDetailList"   parameterType="map"  resultType="com.usercenter.vo.DetailInfo">
+select * from (SELECT b.detail_id,a.user_id,a.farm_id,a.farm_name,a.farm_address,a.farm_price,a.farm_size,b.start_time,b.end_time,b.detail_state  FROM farm a,detail b WHERE b.order_id=#{order_id} AND b.farm_id = a.farm_id ) c where c.user_id LIKE CONCAT('%', '${user_id}', '%')  AND  c.farm_name LIKE CONCAT('%', '${farm_name}', '%')
+	</select>
+</mapper>

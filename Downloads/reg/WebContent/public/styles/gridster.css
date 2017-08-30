@@ -1,0 +1,342 @@
+#tabs-WorkSpace {
+	background-color: #FFFFFF;
+  padding: 0 !important;
+}
+
+#tabs-WorkSpace > .gridster {
+	padding: 0;
+  margin-top: -1px;
+}
+
+#tabs-WorkSpace > .gridster ul {
+	background-color: #FFFFFF;
+}
+
+.designer-main {
+	position: relative;
+    height: 100%;
+    overflow: auto;
+}
+.designer-main >.designer-header {
+  position:absolute;
+  top: 60px;
+  left: 0px;
+  z-index: 10;
+  border: 1px solid #eee;
+  background: #fff;
+}
+.designer-main >.designer-header >.btn-config{
+    font-size: 24px;
+    padding: 5px;
+    float: right;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 20;
+    color: #333;
+    cursor: pointer;
+    background-color: #f1c40f;
+    transition: left .3s;
+}
+.designer-main >.designer-header >.glyphicon-remove{
+  background-color: #f7f0d6;
+    color: #eaa604;
+    border: 1px solid #f0db86;
+    border-left: none;
+    font-size:16px;
+    padding:9px;
+}
+.designer-main >.designer-header >.btn-toolbar{
+  width:180px;
+  height:212px;
+  transition: width .3s;
+  padding: 0 15px;
+  background: #f7f0d6;
+  border: 1px solid #f0db86;
+  margin-left: 0;
+  overflow: hidden;
+}
+.designer-main >.designer-header .tpl-ipt{
+  background-color: #f4e4a3;
+    border: none;
+    border-radius: 5px;
+}
+.designer-main >.designer-header .toolbar-bottom{
+  width: 100%;
+  height: 38px;
+  line-height: 38px;
+  font-size: 18px;
+  text-align: center;
+  overflow: hidden;
+  background-color: #fcebb1;
+  border: 1px solid #f0db86;
+  border-top: none;
+  cursor: pointer;
+}
+.designer-main >.designer-header .toolbar-bottom span{
+  margin-left:5px;
+}
+.designer-main >.designer-header .toolbar-bottom:hover{
+  background-color: #ffe89c;
+}
+.designer-main >.designer-header >.con-close{
+  width:0px;
+  height:0px;
+}
+.designer-main >.designer-header .btn-group{
+  float:none;
+  display:block;
+    margin: 5px 0 10px;
+}
+.designer-main >.designer-header .input-group{
+  float:none;
+  margin:0;
+}
+.designer-main >.designer-header .divider{
+  border-top: 1px dashed #b6b4b4;
+    height: 1px;
+    overflow: hidden;
+    width: 100%;
+}
+.designer-main >.designer-header .btn-circle{
+  border-radius: 5px;
+  width: 100%;
+    height: 26px;
+    border: none;
+    color: #fff;
+}
+.designer-main >.designer-header .btn-c-gray{
+  background-color: #5a5e6c;
+}
+.designer-main >.designer-header .btn-c-gray:hover{
+  background-color: #4c5162;
+}
+.designer-main >.designer-header .btn-c-yellow{
+  background-color: #f39c12;
+}
+.designer-main >.designer-header .btn-c-yellow:hover{
+  background-color: #f0ad4e;
+}
+.designer-main >.designer-header h4{
+    margin: 8px 0;
+}
+
+.designer-main >.designer-body {
+    top: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    background: #fafafa;
+}
+#PORTAL_DIV_MENU_-3.ui-tabs-panel {
+  padding: 0 !important;
+}
+.designer-ui {
+    overflow: auto;
+    height: 400px;
+}
+
+.designer-ui > li {
+    padding: 10px;
+    float: left;
+    list-style: none;
+}
+
+.designer-ui > li > a {
+    display: block;
+    width: 150px;
+    padding: 15px 0;
+    position: relative;
+    background-color: #edf1f2;
+    color: #58666e;
+    border: 1px solid #dee5e7;
+    text-align: center;
+    cursor: pointer;
+}
+
+.designer-ui > li > a >.panel-icon{
+    font-weight: 300;
+	display: block;
+	text-align: center;
+}
+
+
+.designer-ui > li > a.active {
+	background-color: #23b7e5;
+    color: #d9f3fb;
+    border: 1px solid #23b7e5;
+}
+ 
+
+#designer-ul-templates ul {
+	padding: 0;
+	margin: 0;
+}
+
+#designer-ul-templates ul > li {
+	list-style: none;
+}
+
+
+
+.gridster .gs-w {
+    background: #DDD;
+    cursor: pointer;
+}
+
+.gridster .preview-holder {
+    border: none!important;
+    background: red!important;
+}
+
+.gs-remove-handle {
+	position: absolute;
+    bottom: 4px;
+    left: 4px;
+}
+
+.gridster ul{
+    list-style-type: none;
+}
+.gridster li h4 {
+    cursor: move;
+    white-space: normal;
+    font-size: 17px;
+}
+.gridster .preview-holder {
+    border: none!important;
+    background: #9acd32!important;
+}
+
+.gs-remove-handle {
+     position: absolute;
+     z-index: 1;
+ }
+
+.gs-remove-handle-both {
+    width: 20px;
+    height: 20px;
+    bottom: 2px;
+    left: 2px;
+    cursor: pointer;
+    z-index: 20;
+}
+
+
+.gs-w:hover .gs-remove-handle,
+.resizing .gs-remove-handle {
+    opacity: 1;
+}
+
+.gs-remove-handle,
+.gs-w.dragging .gs-remove-handle {
+    opacity: 0;
+}
+
+.gs-remove-disabled .gs-remove-handle {
+    display: none!important;
+}
+
+[data-max-sizex="1"] .gs-remove-handle-x,
+[data-max-sizey="1"] .gs-remove-handle-y,
+[data-max-sizey="1"][data-max-sizex="1"] .gs-remove-handle {
+    display: none !important;
+}
+
+
+.gridster .panel {
+	margin-bottom:0;
+ 	border: 1px solid #dee5e7 !important;
+  	color: #58666e;
+  	height:100%;
+    box-shadow: none;
+}
+
+.gridster .panel >.panel-heading {
+	position: relative;
+	padding: 10px;
+  background-color: #fbfbfb;
+  border-bottom: 0;
+  cursor: move;
+  overflow: hidden;
+}
+
+.gridster .panel >.panel-heading >.panel-title {
+  padding: 3px 0 0;
+	color: #99a6ad !important;
+	font-size: 14px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+  float: left;
+}
+
+/*.gridster .panel .panel-body {
+	padding: 0 10px;	
+}*/
+
+.gridster .panel .panel-body > div {
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: auto;
+	overflow: auto;
+	background-color: #fff;
+	color: #58666e;
+	padding: 0;	
+}
+
+
+
+
+
+
+.gridster .list-group {
+	margin-bottom:0;
+}
+
+.gridster .list-group > .list-group-item {
+	padding:10px 0;
+	border:0;
+	margin-bottom:0;
+	border-bottom: 1px solid #dddddd;
+}
+
+.gridster .list-group > .list-group-item:last-child {
+	border-bottom: 0
+}
+
+.gridster .list-group > .list-group-item > span.glyphicon {
+	float:right;
+}
+
+.gridster .list-group > .list-group-item > i {
+	float:left;
+	margin-right:2px;
+}
+
+.gridster .list-group > .list-group-item > p {
+	white-space:nowrap;
+	width:calc(100% - 28px);
+	overflow:hidden;
+	text-overflow:ellipsis;
+	float:left;
+	margin:0;
+}
+
+.gridster .list-group > .list-group-item:hover, 
+.gridster .list-group > .list-group-item:focus {
+    text-decoration: none;
+    color: #555555;
+    background-color: #f5f5f5;
+}
+
+.gridster .row {
+	margin-left: 1px;
+	margin-right: 1px;
+}
+
+.gridster .underline {
+	border-bottom: 1px solid #dddddd
+}
